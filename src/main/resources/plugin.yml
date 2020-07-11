@@ -1,0 +1,6 @@
+name: OpBot
+version: ${project.version}
+main: xyz.th3z.opbot.OpBot
+api-version: 1.16
+authors: [th3z]
+description: A security layer for operator commands
