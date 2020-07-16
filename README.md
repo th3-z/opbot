@@ -18,4 +18,5 @@ A spigot plugin for vanilluxe.th3-z.xyz
  - `!vunban` Vote for unban
  - `!vrestart` Vote for server restart
  - Custom scoreboard (link, tps)
+ - Dynmap marker commands
  
