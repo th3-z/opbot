@@ -14,4 +14,8 @@ A spigot plugin for vanilluxe.th3-z.xyz
  - On-join welcome with link to site
  - `!backup` Update the latest backup
  - `!tps` for 5s, 5m, 15m TPS averages
+ - `!vban` Vote for ban, kick banned players immediately
+ - `!vunban` Vote for unban
+ - `!vrestart` Vote for server restart
  - Custom scoreboard (link, tps)
+ 
