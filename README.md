@@ -18,5 +18,8 @@ A spigot plugin for vanilluxe.th3-z.xyz
  - `!vunban` Vote for unban
  - `!vrestart` Vote for server restart
  - Custom scoreboard (link, tps)
- - Dynmap marker commands
- 
+ - Dynmap marker commands (list, remove, add)
+ - `!users` Display whitelist
+ - `!ops` Displays ops _will always return empty, implement or sake of transparency_
+ - `!bans` Displays banned players
+ - `!me` Displays recorded ban/unban votes for self _maybe other stats_
