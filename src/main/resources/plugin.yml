@@ -17,3 +17,6 @@ commands:
   whitelist:
     description: Toggle whitelist state for player
     aliases: [w, wl]
+  reload:
+    description: Reload all plugins
+    aliases: [r]

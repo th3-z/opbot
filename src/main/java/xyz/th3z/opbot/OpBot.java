@@ -3,10 +3,7 @@ package xyz.th3z.opbot;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import xyz.th3z.opbot.commands.Help;
-import xyz.th3z.opbot.commands.List;
-import xyz.th3z.opbot.commands.Tps;
-import xyz.th3z.opbot.commands.Whitelist;
+import xyz.th3z.opbot.commands.*;
 import xyz.th3z.opbot.events.PlayerCommandPreprocess;
 import xyz.th3z.opbot.events.PlayerJoin;
 import xyz.th3z.opbot.events.PlayerLeave;
@@ -26,6 +23,7 @@ public final class OpBot extends JavaPlugin implements Listener {
         getCommand("list").setExecutor(new List());
         getCommand("tps").setExecutor(new Tps());
         getCommand("whitelist").setExecutor(new Whitelist());
+        getCommand("reload").setExecutor(new Reload());
 
         BukkitRunnable ticksRunnable = new Ticks();
         ticksRunnable.runTaskTimer(this, 0L, 1L);

@@ -11,6 +11,9 @@ public class PlayerCommandPreprocess implements Listener {
         if (event.getMessage().equalsIgnoreCase("/tps")) {
             // Override paper's /tps command with alias to my /tps
             event.setMessage("/t");
+        } else if (event.getMessage().equalsIgnoreCase("/reload")) {
+            // Override paper's /reload command with alias to my /reload
+            event.setMessage("/r");
         }
     }
 }
