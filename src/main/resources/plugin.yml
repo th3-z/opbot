@@ -4,3 +4,16 @@ main: xyz.th3z.opbot.OpBot
 api-version: 1.16
 authors: [th3z]
 description: A security layer for operator commands
+commands:
+  help:
+    description: Get help text
+    aliases: [h]
+  list:
+    description: List all commands
+    aliases: [l]
+  tps:
+    description: Show current ticks per second
+    aliases: [t]
+  whitelist:
+    description: Toggle whitelist state for player
+    aliases: [w, wl]
