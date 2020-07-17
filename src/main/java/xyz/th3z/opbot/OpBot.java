@@ -26,6 +26,8 @@ public final class OpBot extends JavaPlugin implements Listener {
         getCommand("reload").setExecutor(new Reload());
         getCommand("map").setExecutor(new Map());
         getCommand("web").setExecutor(new Web());
+        getCommand("users").setExecutor(new Users());
+        getCommand("ops").setExecutor(new Ops());
 
         BukkitRunnable ticksRunnable = new Ticks();
         ticksRunnable.runTaskTimer(this, 0L, 1L);

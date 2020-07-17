@@ -12,6 +12,7 @@ A spigot plugin for vanilluxe.th3-z.xyz
  - `/tps` - Displays current ticks per second
  - `/reload` - Reload all plugins
  - `/users` - Displays whitelisted names
+ - `/ops` - Displays list of operators
  
 ### Todo
 
@@ -21,7 +22,5 @@ A spigot plugin for vanilluxe.th3-z.xyz
  - `!vrestart` Vote for server restart
  - Custom scoreboard (link, tps)
  - Dynmap marker commands (list, remove, add)
- - `!users` Display whitelist
- - `!ops` Displays ops _will always return empty, implement or sake of transparency_
  - `!bans` Displays banned players
  - `!me` Displays recorded ban/unban votes for self _maybe other stats_

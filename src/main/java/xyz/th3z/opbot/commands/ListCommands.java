@@ -19,7 +19,9 @@ public class ListCommands implements CommandExecutor {
             "/map - Provides a link to the world map\n",
             "/web - Provides a link to Vanilluxe's website\n",
             "/help - Display help text\n",
-            "/list - List all commands\n"
+            "/list - List all commands\n",
+            "/users - List whitelisted players\n",
+            "/ops - List operators\n"
         );
         sender.sendMessage(ChatColor.AQUA + String.join("", commands));
 

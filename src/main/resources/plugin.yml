@@ -26,3 +26,9 @@ commands:
   web:
     description: Provides a link to Vanilluxe's website
     aliases: [w]
+  users:
+    description: Displays whitelisted usernames
+    aliases: [u]
+  ops:
+    description: Displays operator usernames
+    aliases: [o]
