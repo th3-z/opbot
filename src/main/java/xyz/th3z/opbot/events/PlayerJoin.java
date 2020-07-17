@@ -25,7 +25,7 @@ public class PlayerJoin implements Listener {
         );
 
         String message = String.format(
-            "[\"\", {\"text\":\" %s joined, welcome to \", \"color\":\"red\"}, %s, {\"text\":\".\", \"color\":\"red\"}]",
+            "[\"\", {\"text\":\"%s joined, welcome to \", \"color\":\"red\"}, %s]",
             player.getDisplayName(), link
         );
 

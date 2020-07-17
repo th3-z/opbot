@@ -20,10 +20,12 @@ public final class OpBot extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PlayerCommandPreprocess(), this);
 
         getCommand("help").setExecutor(new Help());
-        getCommand("list").setExecutor(new List());
+        getCommand("list").setExecutor(new ListCommands());
         getCommand("tps").setExecutor(new Tps());
         getCommand("whitelist").setExecutor(new Whitelist());
         getCommand("reload").setExecutor(new Reload());
+        getCommand("map").setExecutor(new Map());
+        getCommand("web").setExecutor(new Web());
 
         BukkitRunnable ticksRunnable = new Ticks();
         ticksRunnable.runTaskTimer(this, 0L, 1L);

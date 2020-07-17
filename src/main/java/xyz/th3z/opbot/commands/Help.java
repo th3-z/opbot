@@ -9,7 +9,7 @@ public class Help implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        sender.sendMessage(ChatColor.AQUA + "Type !list for commands reference.");
+        sender.sendMessage(ChatColor.AQUA + "Type /list for commands reference");
         return false;
     }
 }

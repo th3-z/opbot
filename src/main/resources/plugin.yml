@@ -16,7 +16,13 @@ commands:
     aliases: [t]
   whitelist:
     description: Toggle whitelist state for player
-    aliases: [w, wl]
+    aliases: [wl]
   reload:
     description: Reload all plugins
     aliases: [r]
+  map:
+    description: Provides a link to the world map
+    aliases: [m]
+  web:
+    description: Provides a link to Vanilluxe's website
+    aliases: [w]
