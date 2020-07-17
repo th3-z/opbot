@@ -4,12 +4,16 @@ import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.chat.ComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerChatEvent;
+import org.bukkit.event.player.PlayerChatEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import xyz.th3z.opbot.events.PlayerJoin;
+import xyz.th3z.opbot.events.PlayerLeave;
+import xyz.th3z.opbot.utils.Ticks;
 
 public final class OpBot extends JavaPlugin implements Listener {
 
@@ -17,6 +21,8 @@ public final class OpBot extends JavaPlugin implements Listener {
     public void onEnable() {
         System.out.println("OpBot starting...");
         getServer().getPluginManager().registerEvents(this, this);
+        getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
+        getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
     }
 
     @Override
@@ -30,7 +36,7 @@ public final class OpBot extends JavaPlugin implements Listener {
     }
 
     @EventHandler
-    public void onChat(AsyncPlayerChatEvent event) {
+    public void onChat(PlayerChatEvent event) {
         String message = event.getMessage();
         if (message.length() < 1) return;
 
@@ -74,7 +80,18 @@ public final class OpBot extends JavaPlugin implements Listener {
                     getServer().broadcastMessage(ChatColor.AQUA + "Type !list for commands reference.");
                     break;
                 case "list":
-                    getServer().broadcastMessage(ChatColor.AQUA + "!whitelist <username> - Toggle whitelist for user");
+                    getServer().broadcastMessage(ChatColor.AQUA + "!whitelist <username> - Toggle whitelist for user\n!tps - display server tps\n!s - toggle spectator mode");
+                    break;
+                case "tps":
+                    double tps = Ticks.getTPS();
+                    getServer().broadcastMessage(ChatColor.AQUA + "Current TPS is " + tps);
+                    break;
+                case "s":
+                    Player player = event.getPlayer();
+                    if (player.getGameMode() == GameMode.SPECTATOR)
+                        player.setGameMode(GameMode.SURVIVAL);
+                    else
+                        player.setGameMode(GameMode.SPECTATOR);
                     break;
                 default:
                     break;
