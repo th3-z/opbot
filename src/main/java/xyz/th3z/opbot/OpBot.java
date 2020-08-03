@@ -5,6 +5,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import xyz.th3z.opbot.commands.*;
 import xyz.th3z.opbot.events.PlayerCommandPreprocess;
+import xyz.th3z.opbot.events.PlayerEnterBed;
 import xyz.th3z.opbot.events.PlayerJoin;
 import xyz.th3z.opbot.events.PlayerLeave;
 import xyz.th3z.opbot.utils.Ticks;
@@ -18,6 +19,7 @@ public final class OpBot extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(new PlayerJoin(), this);
         getServer().getPluginManager().registerEvents(new PlayerLeave(), this);
         getServer().getPluginManager().registerEvents(new PlayerCommandPreprocess(), this);
+        getServer().getPluginManager().registerEvents(new PlayerEnterBed(), this);
 
         getCommand("help").setExecutor(new Help());
         getCommand("list").setExecutor(new ListCommands());
